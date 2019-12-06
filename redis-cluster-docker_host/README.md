@@ -1,14 +1,18 @@
 这个版本网络用host 用的是母机的IP 喽 
 ## note 
-用的是容器内部IP  172	段的 这个是v1版本的 
+
 # 环境列表
-- redis 5.0.5 
+- redis 5.0.5  5.0.2
 - docker-compose
 
 # 开启 
 `docker-compose up -d`
 
 # 集群快速搭建
+我是用host 网络 用上母机的ip
+
+
+如果你是用容器内网IP 
 通过`docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' node-80`可以查看各个节点在容器内网的ip，
 下面的命令必须使用ip而非容器名称。
 ```
