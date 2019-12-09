@@ -1,0 +1,18 @@
+version: "3"
+services: 
+    redis-cluster-6379:
+        image: redis:5.0.2-alpine
+        container_name: node-6379
+        ports:
+            - "6379:6379"
+        restart: always
+        network_mode: host
+        #networks:
+        #    - backend
+        volumes:
+            - ./conf/redis-6379.conf:/usr/local/etc/redis/redis.conf
+            - ./log:/var/log/redis
+            - ./data:/data/redis
+        command: sh -c "redis-server /usr/local/etc/redis/redis.conf"
+
+

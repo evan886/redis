@@ -8,7 +8,10 @@
 # 开启 
 `docker-compose up -d`
 
-# 集群快速搭建
+# 如果想用单机版 请用 conf/redis-6379.conf
+
+
+# 集群快速搭建  在每台机器上想两个 redis 容器
 我是用host 网络 用上母机的ip
 
 
