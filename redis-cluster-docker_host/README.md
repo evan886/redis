@@ -2,7 +2,7 @@
 ## note 
 
 # 环境列表
-- redis 5.0.5  5.0.2
+- redis 5.0.5  5.0.2  alpine
 - docker-compose
 
 # 开启 

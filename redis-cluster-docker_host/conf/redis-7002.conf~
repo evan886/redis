@@ -13,5 +13,5 @@ dbfilename dump_7002.rdb
 cluster-config-file "nodes-7002.conf"
 protected-mode yes
 dir /data/redis/
-protected-mode yes
+
 logfile /var/log/redis/7002.log
