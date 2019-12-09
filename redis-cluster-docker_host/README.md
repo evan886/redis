@@ -9,6 +9,7 @@
 `docker-compose up -d`
 
 # 如果想用单机版 请用 conf/redis-6379.conf
+配置还得有空再优化一下更加好
 
 
 # 集群快速搭建  在每台机器上想两个 redis 容器
