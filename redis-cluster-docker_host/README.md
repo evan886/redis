@@ -8,7 +8,7 @@
 # 开启 
 `docker-compose up -d`
 
-# 如果想用单机版 请用 conf/redis-6379.conf
+# 如果想用单机版 请用 conf/snsredis.conf(比较详细)  redis-6379.conf
 配置还得有空再优化一下更加好
 
 
@@ -23,7 +23,7 @@
 docker exec -it  node-80 redis-cli -p 6380 --cluster create {node-80 ip}:6380  {node-81 ip}:6381  {node-82 ip}:6382  {node-83 ip}:6383  {node-84 ip}:6384  {node-85 ip}:6385 --cluster-replicas 1
 ```
 
-实际执行命令和结果
+实际执行命令和结果  这个是用 docker 172 网段的
 ```
 ]$ docker exec -it  node-80 redis-cli -p 6380 --cluster create 172.20.0.5:6380  172.20.0.6:6381   172.20.0.3:6382   172.20.0.7:6383   172.20.0.2:6384   172.20.0.4:6385 --cluster-replicas 1
 >>> Performing hash slots allocation on 6 nodes...
