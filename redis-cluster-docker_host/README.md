@@ -16,7 +16,7 @@
  firewall-cmd --reload
 
 
-docker exec -it  node-8001  redis-cli -p 8001  --cluster create  103.204.78.34:8001    103.204.78.34:8002 103.204.78.34:8003 103.204.78.34:8004 103.204.78.34:8005 103.204.78.34:8006 --cluster-replicas 1
+docker exec -it  node-8001  redis-cli -p 8001  --cluster create  103.04.78.34:8001    103.04.78.34:8002 103.04.78.34:8003 103.04.78.34:8004 103.04.78.34:8005 103.04.78.34:8006 --cluster-replicas 1
 
 
 
