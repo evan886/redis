@@ -1,5 +1,5 @@
 这个版本网络用host 用的是母机的IP 喽 
-## note 
+# note 
 
 # 环境列表
 - redis 5.0.5  5.0.2  alpine
@@ -8,7 +8,7 @@
 # 开启 
 `docker-compose up -d`
 
-#2020 
+# 2020 
 如果想用800的端口 请用 8001目录下的 
 记得加防火墙
  firewall-cmd --add-port=8001-8006/tcp  --permanent

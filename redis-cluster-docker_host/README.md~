@@ -8,6 +8,18 @@
 # 开启 
 `docker-compose up -d`
 
+#2020 
+如果想用800的端口 请用 8001目录下的 
+记得加防火墙
+ firewall-cmd --add-port=8001-8006/tcp  --permanent
+
+ firewall-cmd --reload
+
+
+docker exec -it  node-8001  redis-cli -p 8001  --cluster create  103.204.78.34:8001    103.204.78.34:8002 103.204.78.34:8003 103.204.78.34:8004 103.204.78.34:8005 103.204.78.34:8006 --cluster-replicas 1
+
+
+
 # 如果想用单机版 请用 conf/snsredis.conf(比较详细)  redis-6379.conf
 配置还得有空再优化一下更加好
 
