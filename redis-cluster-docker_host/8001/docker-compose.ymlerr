@@ -1,20 +1,12 @@
 version: "3"
-#networks:
-#  frontend:
-#    driver: ${NETWORKS_DRIVER}
-#  backend:
-#    driver: ${NETWORKS_DRIVER}
 
 services: 
     redis-cluster-8006:
-        image: redis:5.0.0-alpine
+        image: redis:5.0.2-alpine
         container_name: node-8006
         ports:
             - "8006:8006"
-        restart: always
         network_mode: host
-        #networks:
-        #    - backend
         volumes:
             - ./conf/redis-8006.conf:/usr/local/etc/redis/redis.conf
             - ./log:/var/log/redis
@@ -22,29 +14,24 @@ services:
         command: sh -c "redis-server /usr/local/etc/redis/redis.conf"
 
     redis-cluster-8001:
-        image: redis:5.0.0-alpine
+        image: redis:5.0.2-alpine
         container_name: node-8001
         ports:
             - "8001:8001"
-        restart: always
         network_mode: host
-        #networks:
-        #    - backend
+
         volumes:
             - ./conf/redis-8001.conf:/usr/local/etc/redis/redis.conf
             - ./log:/var/log/redis
             - ./data:/data/redis
         command: sh -c "redis-server /usr/local/etc/redis/redis.conf"
-
-    redis-cluster-8002:
-        image: redis:5.0.0-alpine
+   redis-cluster-8002:
+        image: redis:5.0.2-alpine
         container_name: node-8002
         ports:
             - "8002:8002"
-        restart: always
         network_mode: host
-        #networks:
-        #    - backend
+
         volumes:
             - ./conf/redis-8002.conf:/usr/local/etc/redis/redis.conf
             - ./log:/var/log/redis
@@ -52,14 +39,12 @@ services:
         command: sh -c "redis-server /usr/local/etc/redis/redis.conf"
 
     redis-cluster-8003:
-        image: redis:5.0.0-alpine
+        image: redis:5.0.2-alpine
         container_name: node-8003
         ports:
             - "8003:8003"
-        restart: always
         network_mode: host
-        #networks:
-        #    - backend
+
         volumes:
             - ./conf/redis-8003.conf:/usr/local/etc/redis/redis.conf
             - ./log:/var/log/redis
@@ -67,14 +52,12 @@ services:
         command: sh -c "redis-server /usr/local/etc/redis/redis.conf"
 
     redis-cluster-8004:
-        image: redis:5.0.0-alpine
+        image: redis:5.0.2-alpine
         container_name: node-8004
         ports:
             - "8004:8004"
-        restart: always
         network_mode: host
-        #networks:
-        #    - backend
+
         volumes:
             - ./conf/redis-8004.conf:/usr/local/etc/redis/redis.conf
             - ./log:/var/log/redis
@@ -82,16 +65,17 @@ services:
         command: sh -c "redis-server /usr/local/etc/redis/redis.conf"
 
     redis-cluster-8005:
-        image: redis:5.0.0-alpine
+        image: redis:5.0.2-alpine
         container_name: node-8005
         ports:
             - "8005:8005"
-        restart: always
         network_mode: host
-        #networks:
-        #    - backend
+
         volumes:
             - ./conf/redis-8005.conf:/usr/local/etc/redis/redis.conf
             - ./log:/var/log/redis
             - ./data:/data/redis
         command: sh -c "redis-server /usr/local/etc/redis/redis.conf"
+
+
+
