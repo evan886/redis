@@ -15,4 +15,5 @@ protected-mode yes
 dir /data/redis/
 protected-mode yes
 logfile /var/log/redis/7000.log
+#pidfile /var/run/redis_7000.pid
 
