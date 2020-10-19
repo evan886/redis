@@ -7,7 +7,7 @@ version: "3"
 
 services: 
     redis-cluster-7000:
-        image: redis:5.0.2-alpine
+        image: redis:5.0.9-alpine
         container_name: node-7000
         ports:
             - "7000:7000"
@@ -22,7 +22,7 @@ services:
         command: sh -c "redis-server /usr/local/etc/redis/redis.conf"
 
     redis-cluster-7001:
-        image: redis:5.0.2-alpine
+        image: redis:5.0.9-alpine
         container_name: node-7001
         ports:
             - "7001:7001"
@@ -37,7 +37,7 @@ services:
         command: sh -c "redis-server /usr/local/etc/redis/redis.conf"
 
     redis-cluster-7002:
-        image: redis:5.0.2-alpine
+        image: redis:5.0.9-alpine
         container_name: node-7002
         ports:
             - "7002:7002"
@@ -52,7 +52,7 @@ services:
         command: sh -c "redis-server /usr/local/etc/redis/redis.conf"
 
     redis-cluster-7003:
-        image: redis:5.0.2-alpine
+        image: redis:5.0.9-alpine
         container_name: node-7003
         ports:
             - "7003:7003"
@@ -67,7 +67,7 @@ services:
         command: sh -c "redis-server /usr/local/etc/redis/redis.conf"
 
     redis-cluster-7004:
-        image: redis:5.0.2-alpine
+        image: redis:5.0.9-alpine
         container_name: node-7004
         ports:
             - "7004:7004"
@@ -82,7 +82,7 @@ services:
         command: sh -c "redis-server /usr/local/etc/redis/redis.conf"
 
     redis-cluster-7005:
-        image: redis:5.0.2-alpine
+        image: redis:5.0.9-alpine
         container_name: node-7005
         ports:
             - "7005:7005"
